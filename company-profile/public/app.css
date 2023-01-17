@@ -1,0 +1,83 @@
+.slides h1 {
+    font-weight: 500;
+}
+
+.slides h1,
+.slides h4 {
+    text-shadow: 1px 1px 1px rgb(112, 100, 100);
+}
+
+.slides img {
+    padding: 5px;
+}
+
+.about {
+    padding: 2px;
+    background-image: url("../img/bggwe/1.jpg");
+    opacity: 0.8;
+    text-shadow: 2px 2px 2px black;
+}
+
+.about h3 {
+    padding-top: 50px;
+    font-weight: bold;
+    text-shadow: 3px 3px 2px black;
+}
+#clients {
+    height: 400px;
+    opacity: 0.7;
+}
+
+.client img {
+    max-width: 220px;
+    filter: drop-shadow(5px 4px 4px rgb(23, 21, 21));
+}
+
+.client h3 {
+    text-shadow: 2px 2px 2px black;
+    margin-top: 60px;
+    font-weight: bold;
+}
+
+.kartu {
+    margin-top: 20px;
+    padding-top: 5px;
+}
+
+.services {
+    padding: 2px;
+    background-image: url("../img/slider/1.jpg");
+}
+
+.services h3 {
+    color: white;
+    font-weight: bold;
+    padding-top: 25px;
+    text-shadow: 1px 1px 1px black;
+}
+.services h5 {
+    color: white;
+    font-weight: 600;
+    padding: 10px;
+    text-shadow: 1px 1px 1px black;
+}
+
+.project {
+    background-image: url("../img/bggwe/1.jpg");
+    padding: 20px;
+    opacity: 0.9;
+}
+.project h5 {
+    color: white;
+    font-weight: 550;
+    padding: 5px;
+    text-shadow: 1px 1px 1px black;
+}
+
+.project h3 {
+    color: white;
+    font-weight: bold;
+    padding-top: 10px;
+    text-shadow: 2px 2px 1px black;
+    padding-bottom: 20px;
+}
