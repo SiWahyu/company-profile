@@ -8,20 +8,24 @@
 }
 
 .slides img {
-    padding: 5px;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.about {
-    padding: 2px;
-    background-image: url("../img/bggwe/1.jpg");
-    opacity: 0.8;
-    text-shadow: 2px 2px 2px black;
-}
-
-.about h3 {
+.about h2 {
     padding-top: 50px;
+    font-style: inherit;
+    color: rgb(106, 95, 95);
+}
+.about h5 {
+    color: rgb(112, 110, 110);
     font-weight: bold;
-    text-shadow: 3px 3px 2px black;
+}
+.about p {
+    color: rgb(76, 72, 72);
 }
 #clients {
     height: 400px;

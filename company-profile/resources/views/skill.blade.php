@@ -1,22 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+@extends('layouts.app')
+@section('title','Skill')
 
-    <!-- Css gwe -->
-    <link rel="stylesheet" href="{{asset('app.css')}}" />
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-</head>
-<body>
-    <div>@include('nav')</div>
+@section('skill')
     <div id="services" class="services">
         <div class="container center">
           <h3>Skill Company</h3>
@@ -72,5 +57,4 @@
           </div>
         </div>
       </div>
-</body>
-</html>
+@endsection

@@ -19,7 +19,6 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('about');
 });
-Route::redirect('/project', 'clients', 301);
 
 Route::get('/clients', function () {
     return view('clients');
@@ -28,3 +27,5 @@ Route::get('/clients', function () {
 Route::get('/skill', function () {
     return view('skill');
 });
+
+Route::view('/contact', 'contact');
