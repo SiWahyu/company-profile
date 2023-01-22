@@ -39,4 +39,12 @@ class KontakController extends Controller
         return redirect('/comments');
     }
 
+    public function delete($id) {
+
+        $kontakId = Kontak::find($id);
+        $kontakId->delete();
+
+        return redirect('/comments');
+    }
+
 }

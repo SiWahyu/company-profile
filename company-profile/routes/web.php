@@ -37,3 +37,5 @@ Route::post('/contact/store',[KontakController::class,'store']);
 Route::get('/comments/{id}/edit', [KontakController::class, 'edit']);
 
 Route::put('/comments/{id}', [KontakController::class, 'update']);
+
+Route::delete('/comments/{id}/delete', [KontakController::class, 'delete']);

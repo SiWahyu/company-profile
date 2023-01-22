@@ -28,7 +28,14 @@
                     <td>{{$kontak->name}}</td>
                     <td>{{$kontak->email}}</td>
                     <td>{{$kontak->message}}</td>
-                    <td ><a href="comments/{{$kontak->id}}/edit">Edit</a></td>
+                    <td>
+                        <a class="btn btn-primary" href="comments/{{$kontak->id}}/edit">Edit</a>
+                        <form action="/comments/{{$kontak->id}}/delete" method="POST">
+                            @csrf
+                            @method('delete')
+                            <input type="submit" value="delete" class="btn btn-danger">
+                        </form>
+                    </td>
                 </tr>
                 @endforeach
 
