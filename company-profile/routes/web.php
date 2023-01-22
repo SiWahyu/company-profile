@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\KontakController;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,4 +28,12 @@ Route::get('/skill', function () {
     return view('skill');
 });
 
-Route::view('/contact', 'contact');
+Route::get('/comments', [KontakController::class,'index']);
+
+Route::get('/contact', [KontakController::class,'create']);
+
+Route::post('/contact/store',[KontakController::class,'store']);
+
+Route::get('/comments/{id}/edit', [KontakController::class, 'edit']);
+
+Route::put('/comments/{id}', [KontakController::class, 'update']);

@@ -22,22 +22,23 @@
         </ul>
       </div>
       <div class="col m7 s12">
-        <form action="act_dasis.php" method="POST">
+        <form action="/contact/store" method="POST">
+            @csrf
           <div class="card-panel">
             <h5>Please Fill Ou This Form</h5>
             <div class="input-field">
-              <input type="text" name="nama" id="nama" />
-              <label for="nama">Name</label>
+              <input type="text" name="name" id="nama" autocomplete="off"/>
+              <label for="name">Name</label>
             </div>
             <div class="input-field">
-              <input type="email" name="email" id="email" />
-              <label for="email">Email</label>
+              <input type="email" name="email" id="email" autocomplete="off"/>
+              <label>Email</label>
             </div>
             <div class="input-field">
               <textarea name="message" id="message" class="materialize-textarea"></textarea>
               <label for="message">Message</label>
             </div>
-            <button type="submit" class="btn blue darken-2">Kirim</button>
+            <button type="submit" name="submit" class="btn blue darken-2">Kirim</button>
           </div>
         </form>
       </div>
