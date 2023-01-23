@@ -1,48 +1,40 @@
-@extends('layouts.app')
-
+@extends('layouts.template')
 @section('title','Contact')
-
 @section('contact')
-<!-- Contact -->
-<section id="contact" class="contact blue lighteen-3">
-    <div class="container">
-      <h3 class="light white-text text-darken-3 center">Contact Us</h3>
-    </div>
-    <div class="row">
-      <div class="col m5 s12">
-        <div class="card-panel blue darken-2 center white-text">
-          <i class="material-icons">email</i>
-          <h5>Contact</h5>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga est deleniti nam sint. Officia atque fugit commodi cum distinctio eaque inventore nam laboriosam!</p>
-        </div>
-        <ul class="collection with-header">
-          <li class="collection-header"><h4>Our Office</h4></li>
-          <li class="collection-item">JL. Tanah Baru No. 178, Depok</li>
-          <li class="collection-item">West Java Indonesia</li>
-        </ul>
-      </div>
-      <div class="col m7 s12">
-        <form action="/contact/store" method="POST">
-            @csrf
-          <div class="card-panel">
-            <h5>Please Fill Ou This Form</h5>
-            <div class="input-field">
-              <input type="text" name="name" id="nama" autocomplete="off"/>
-              <label for="name">Name</label>
-            </div>
-            <div class="input-field">
-              <input type="email" name="email" id="email" autocomplete="off"/>
-              <label>Email</label>
-            </div>
-            <div class="input-field">
-              <textarea name="message" id="message" class="materialize-textarea"></textarea>
-              <label for="message">Message</label>
-            </div>
-            <button type="submit" name="submit" class="btn blue darken-2">Kirim</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
+<!-- START FORM -->
+<div class="container text-center p-4">
+    <h1>Contact</h1>
+</div>
 
-  @endsection
+
+<form action='' method='POST'>
+    @csrf
+    @include('component.pesan')
+    <a href="{{url('/')}}" class="btn btn-secondary text-bold">KEMBALI</a>
+    <div class="my-3 p-3 bg-body rounded shadow-sm">
+        <div class="mb-3 row">
+            <label class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name='name' id="name" autocomplete="off" placeholder="Name" value="{{Session::get('name')}}">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name='email' id="email" autocomplete="off" placeholder="Email" value="{{Session::get('email')}}">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label class="col-sm-2 col-form-label">Message</label>
+            <div class="col-sm-10 form-outline">
+                <textarea class="form-control" name="message" id="message" placeholder="Message" rows="6">{{Session::get('message')}}</textarea>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="jurusan" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10"><button type="submit" class="btn btn-primary" name="submit">SIMPAN</button></div>
+        </div>
+      </form>
+    </div>
+    <!-- AKHIR FORM -->
+    @endsection

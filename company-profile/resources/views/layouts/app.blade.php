@@ -51,7 +51,6 @@ rel="stylesheet">
       </ul>
 
       {{-- Content --}}
-      @yield('contact')
       @yield('content')
       @yield('skill')
       @yield('slider')

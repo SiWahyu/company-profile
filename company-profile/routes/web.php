@@ -28,14 +28,4 @@ Route::get('/skill', function () {
     return view('skill');
 });
 
-Route::get('/comments', [KontakController::class,'index']);
-
-Route::get('/contact', [KontakController::class,'create']);
-
-Route::post('/contact/store',[KontakController::class,'store']);
-
-Route::get('/comments/{id}/edit', [KontakController::class, 'edit']);
-
-Route::put('/comments/{id}', [KontakController::class, 'update']);
-
-Route::delete('/comments/{id}/delete', [KontakController::class, 'delete']);
+Route::resource('/contact', KontakController::class);
